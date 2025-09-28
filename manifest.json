@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Home",
+  "description": "Home page extension",
+  "version": "1.0",
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "permissions": [],
+  "icons": {
+    "128": "icon.png"
+  }
+}
