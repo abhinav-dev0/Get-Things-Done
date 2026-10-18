@@ -1,6 +1,6 @@
 # GetThingsDone ⚡
 
-A sleek, lightweight **Neo-Brutalist** new-tab dashboard extension for your browser. Track upcoming deadlines, monitor habit streaks, manage your daily to-do list, and jot down quick notes—all in one place, stored 100% locally in your browser memory.
+A sleek, lightweight new-tab dashboard extension for your browser. Track upcoming deadlines, monitor habit streaks, manage your daily to-do list, and jot down quick notes—all in one place, stored 100% locally in your browser memory.
 
 ### [🚀 Live Demo](https://abhinav-dev0.github.io/countdowns-extension/)
 
