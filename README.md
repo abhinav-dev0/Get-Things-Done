@@ -2,7 +2,7 @@
 
 A lightweight productivity tool for your browser, available as both a website and a new-tab extension. Manage countdowns, timers, to-do lists, and quick notes in one place, with dark and light themes. Your data stays stored locally in your browser.
 
-### [🚀 Live Demo](https://abhinav-dev0.github.io/countdowns-extension/)
+### [🚀 Live Demo](https://abhinav-dev0.github.io/Get-Things-Done/)
 
 ---
 
@@ -38,7 +38,7 @@ A lightweight productivity tool for your browser, available as both a website an
 
 You can use **GetThingsDone** directly in your browser without installing anything.
 
-👉 **[Open GetThingsDone](https://abhinav-dev0.github.io/countdowns-extension/)**
+👉 **[Open GetThingsDone](https://abhinav-dev0.github.io/Get-Things-Done/)**
 
 ### 🧩 Install as a Chrome Extension (Unpacked)
 
