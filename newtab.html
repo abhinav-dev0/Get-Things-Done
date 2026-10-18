@@ -1,23 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Home</title>
+  <title>GetThingsDone</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="icon.png">
 </head>
 <body>
-  <div class="container">
-    <div class="form-container">
-        <label for="">Event Title</label>
-        <input type="text" name="" id="title-input">
-        <label for="">Date</label>
-        <input type="date" name="" id="date-input">
-        <button id="add-btn">Add</button>
-    </div>
-        <ul id="events-list">
-            <li>No events added yet.</li>
-        </ul>
+  <div class="app-container">
+    <!-- Top Bar with 2 Rows: Brand & Controls on Row 1, Centered Tabs on Row 2 -->
+    <header class="app-header">
+      <div class="header-top-row">
+        <div class="header-brand">
+          <img src="icon.png" alt="GetThingsDone" class="app-icon" />
+          <div class="logo">GetThingsDone</div>
+        </div>
+        <div class="header-right">
+          <div id="live-clock" class="live-clock">--:--:-- • --- --</div>
+          <button id="theme-toggle-btn" class="theme-btn" title="Toggle Dark/Light Mode">🌙 Dark</button>
+        </div>
+      </div>
+      <nav class="nav-tabs">
+        <button class="tab-btn active" data-tab="countdowns"><span class="tab-num">1</span> ⏳ Countdowns</button>
+        <button class="tab-btn" data-tab="timers"><span class="tab-num">2</span> ⏱️ Timers</button>
+        <button class="tab-btn" data-tab="todos"><span class="tab-num">3</span> ✅ To-Do</button>
+        <button class="tab-btn" data-tab="notes"><span class="tab-num">4</span> 📝 Notes</button>
+      </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="tab-content-wrapper">
+      <!-- 1. Countdowns Tab -->
+      <section id="tab-countdowns" class="tab-panel active">
+        <div class="form-container">
+          <label for="cd-title-input">Title</label>
+          <input type="text" id="cd-title-input" placeholder="e.g. Vacation, Exam, Launch">
+          <label for="cd-date-input">Target Date</label>
+          <input type="date" id="cd-date-input">
+          <button id="add-cd-btn" class="neo-btn primary">+ Add Countdown</button>
+        </div>
+        <div id="countdowns-list" class="cards-grid"></div>
+      </section>
+
+      <!-- 2. Timers Tab -->
+      <section id="tab-timers" class="tab-panel">
+        <div class="form-container">
+          <label for="timer-title-input">Title</label>
+          <input type="text" id="timer-title-input" placeholder="e.g. No Smoking Streak, Deep Work, Project Started">
+          <button id="add-timer-btn" class="neo-btn primary">+ Start Timer</button>
+        </div>
+        <div id="timers-list" class="cards-grid"></div>
+      </section>
+
+      <!-- 3. To-Do Tab -->
+      <section id="tab-todos" class="tab-panel">
+        <div class="form-container todo-form">
+          <input type="text" id="todo-input" placeholder="Add a new task... (Press Enter)">
+          <button id="add-todo-btn" class="neo-btn primary">+ Add Task</button>
+        </div>
+        <div class="todo-controls">
+          <div class="todo-filters">
+            <button class="filter-btn active" data-filter="all">All (<span id="count-all">0</span>)</button>
+            <button class="filter-btn" data-filter="active">Active (<span id="count-active">0</span>)</button>
+            <button class="filter-btn" data-filter="completed">Completed (<span id="count-completed">0</span>)</button>
+          </div>
+          <button id="clear-completed-btn" class="neo-btn small">Clear Completed</button>
+        </div>
+        <ul id="todo-list" class="todo-items-list"></ul>
+      </section>
+
+      <!-- 4. Notes Tab -->
+      <section id="tab-notes" class="tab-panel">
+        <div class="notes-container">
+          <div class="notes-header">
+            <div class="notes-status" id="notes-status">● Saved in browser</div>
+            <div class="notes-meta">
+              <span id="notes-word-count">0 words</span>
+              <span id="notes-char-count">0 chars</span>
+              <button id="notes-copy-btn" class="neo-btn small">Copy</button>
+              <button id="notes-clear-btn" class="neo-btn small danger">Clear</button>
+            </div>
+          </div>
+          <textarea id="notes-textarea" placeholder="Jot down quick thoughts, ideas, links, or to-dos... Everything auto-saves in browser memory!"></textarea>
+        </div>
+      </section>
+    </main>
   </div>
 
   <script src="script.js"></script>
